@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nithya T M | Front-End Developer & Cyber Security Student</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        /* Ensure sections land below the fixed navbar */
+        section[id] {
+            scroll-margin-top: 5rem;
+        }
+
+        .glass {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Unified Accent Handling */
+        .accent-cyan { color: #06b6d4; }
+        .accent-violet { color: #8b5cf6; }
+
+        .dark .glass {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .light .glass {
+            background: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            box-shadow: 
+                0 1px 3px 0 rgba(0, 0, 0, 0.02),
+                0 10px 15px -3px rgba(148, 163, 184, 0.08),
+                0 4px 6px -2px rgba(148, 163, 184, 0.04);
+        }
+
+        .light .glass:hover {
+            box-shadow: 
+                0 20px 25px -5px rgba(148, 163, 184, 0.12),
+                0 10px 10px -5px rgba(148, 163, 184, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .neon-glow {
+            text-shadow: 0 0 12px rgba(6, 182, 212, 0.3);
+        }
+        .dark .neon-glow {
+            text-shadow: 0 0 15px rgba(6, 182, 212, 0.6);
+        }
+
+        .neon-border {
+            box-shadow: 0 0 15px rgba(6, 182, 212, 0.2);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes download-bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(4px); }
+        }
+        .animate-download-bounce {
+            animation: download-bounce 0.8s ease-in-out infinite;
+        }
+
+        .progress-bar {
+            transition: width 1.2s cubic-bezier(0.65, 0, 0.35, 1);
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .light ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #06b6d4;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            navy: '#0f172a',
+                            cyan: '#06b6d4',
+                            violet: '#8b5cf6',
+                            black: '#020617',
+                        },
+                        soft: {
+                            bg: '#f6f7f9',
+                            'bg-alt': '#eef1f5',
+                            card: '#ffffff',
+                            text: '#111827',
+                            muted: '#4b5563',
+                            border: 'rgba(0, 0, 0, 0.08)'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "recharts": "https://esm.sh/recharts@^3.6.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-soft-bg text-soft-text dark:bg-cyber-black dark:text-slate-100 transition-colors duration-500">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
